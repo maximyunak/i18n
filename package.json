@@ -10,6 +10,11 @@
     "fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix && prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "@heroui/input": "^2.4.13",
+    "@heroui/react": "^2.7.2",
+    "@heroui/system": "^2.4.10",
+    "@heroui/theme": "^2.4.9",
+    "framer-motion": "^12.4.7",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

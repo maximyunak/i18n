@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 
 import React from 'react';
 
+import { Providers } from './providers';
 import './globals.css';
 
 const geistSans = Geist({
@@ -27,10 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#282828] min-w-screen min-h-screen`}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
