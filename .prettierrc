@@ -2,20 +2,35 @@
   "singleQuote": true,
   "tabWidth": 2,
   "importOrder": [
-    "^react",
-    "^@core/(.*)$",
-    "^@server/(.*)$",
-    "^@ui/(.*)$",
+    "^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^@/types/(.*)$",
+    "^@/config/(.*)$",
+    "^@/lib/(.*)$",
+    "^@/hooks/(.*)$",
+    "^@/components/ui/(.*)$",
+    "^@/components/(.*)$",
+    "^@/styles/(.*)$",
+    "^@/app/(.*)$",
+    "",
     "^[./]"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports"
-  ],
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"],
   "importOrderParserPlugins": [
     "typescript",
     "jsx",
-    "decorators-legacy"
-  ]
+    "decorators-legacy",
+    "classProperties",
+    "dynamicImport"
+  ],
+  "importOrderTypeScriptVersion": "5.0.0",
+  "parser": "babel-ts",
+  "experimentalTernaries": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "vueIndentScriptAndStyle": false
 }

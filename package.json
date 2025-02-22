@@ -14,14 +14,16 @@
     "@heroui/react": "^2.7.2",
     "@heroui/system": "^2.4.10",
     "@heroui/theme": "^2.4.9",
+    "@reduxjs/toolkit": "^2.5.1",
     "framer-motion": "^12.4.7",
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

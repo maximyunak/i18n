@@ -1,12 +1,13 @@
 'use client';
 
+import Image from 'next/image';
+import { decrement, increment } from '@/shared/counterSlice';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks/hooks';
 import { Button, Card, Input, Select, SelectItem } from '@heroui/react';
 
-import Image from 'next/image';
 export default function Home() {
-  return (
-    <div>
-      <Input label='asdasd' className="max-w-56" color="danger" />
-    </div>
-  );
+  const { value } = useAppSelector((state) => state.counter);
+  const dispatch = useAppDispatch();
+
+  return <div>{value}</div>;
 }
