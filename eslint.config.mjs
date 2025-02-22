@@ -1,27 +1,24 @@
-import eslint from '@eslint/js';
-import typescript from '@typescript-eslint/parser';
+import { FlatCompat } from '@eslint/eslintrc';
+import typescriptParser from '@typescript-eslint/parser';
 import unusedImports from 'eslint-plugin-unused-imports';
 
+const compat = new FlatCompat({
+  baseDirectory: process.cwd(),
+});
+
 export default [
-  eslint.configs.recommended,
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
-      parser: typescript,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-      },
+      parser: typescriptParser,
     },
     plugins: {
       'unused-imports': unusedImports,
     },
     rules: {
-      'unused-imports/no-unused-imports': 'warn',
-      'unused-imports/no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
+      // 'unused-imports/no-unused-imports-ts': 'error',
+      'unused-imports/no-unused-imports': 'error',
       'no-unused-vars': 'off',
-      'no-restricted-exports': 'off',
     },
   },
 ];
