@@ -1,10 +1,22 @@
 'use client';
 
-import { useAppDispatch, useAppSelector } from '@/shared/hooks/hooks';
+import { ProductList } from '@/examples/react-query/components';
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure,
+} from '@heroui/react';
 
 export default function Home() {
-  const { value } = useAppSelector((state) => state.counter);
-  const dispatch = useAppDispatch();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  return <div>{value}</div>;
+  return (
+    <div>
+      <ProductList />
+    </div>
+  );
 }

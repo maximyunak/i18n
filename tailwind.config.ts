@@ -7,7 +7,7 @@ export default {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@heroui/react/dist/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@heroui/theme/dist/components/(input|form).js',
+    './node_modules/@heroui/theme/dist/components/(input|modal|form).js',
   ],
   theme: {
     extend: {

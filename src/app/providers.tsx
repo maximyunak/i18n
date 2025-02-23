@@ -2,11 +2,12 @@
 
 import { HeroUIProvider } from '@heroui/react';
 
+import { TanstackProvider } from './tanstack-provider';
+
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <HeroUIProvider>
-      {children}
-      sdfsd
-    </HeroUIProvider>
+    <TanstackProvider>
+      <HeroUIProvider>{children}</HeroUIProvider>
+    </TanstackProvider>
   );
 }
