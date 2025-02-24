@@ -1,0 +1,13 @@
+{
+  "IndexPage": {
+    "title": "Index Page",
+    "description": "This is the index page <b>bold</b>"
+  },
+  "LocalSwitcher": {
+    "label": "Select Language"
+  },
+  "localeLayout": {
+    "title": "Locale Layout",
+    "description": "This is the locale layout <b>bold</b>"
+  }
+}

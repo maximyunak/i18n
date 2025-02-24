@@ -1,0 +1,13 @@
+{
+  "IndexPage": {
+    "title": "Главная страница",
+    "description": "Это главная страница <b>жирным</b>"
+  },
+  "LocalSwitcher": {
+    "label": "Выберите язык"
+  },
+  "localeLayout": {
+    "title": "Страница локали",
+    "description": "Это страница локали <b>жирным</b>"
+  }
+}

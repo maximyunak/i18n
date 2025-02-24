@@ -15,10 +15,22 @@ export default [
     plugins: {
       'unused-imports': unusedImports,
     },
-    rules: {
-      // 'unused-imports/no-unused-imports-ts': 'error',
-      'unused-imports/no-unused-imports': 'error',
-      'no-unused-vars': 'off',
-    },
+    rules: [
+      {
+        // 'unused-imports/no-unused-imports-ts': 'error',
+        'unused-imports/no-unused-imports': 'error',
+        'no-unused-vars': 'off',
+      },
+      {
+        name: 'next/link',
+        message: 'Use @/navigation instead',
+        importNames: ['default'],
+      },
+      {
+        name: 'next/navigation',
+        message: 'Use @/navigation instead',
+        importNames: ['redirect', 'usePathname', 'useRouter'],
+      },
+    ],
   },
 ];
