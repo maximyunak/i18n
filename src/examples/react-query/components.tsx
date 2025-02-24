@@ -70,7 +70,7 @@ export const ProductList = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 text-black">
+    <div className="mx-auto max-w-4xl p-4 text-black">
       <Card className="mb-6">
         <CardHeader>
           <h2 className="text-2xl font-bold">Список продуктов</h2>
@@ -111,7 +111,7 @@ export const ProductList = () => {
         </CardBody>
       </Card>
 
-      <div className="space-y-4 ">
+      <div className="space-y-4">
         {products?.map((product: Product) => (
           <Card key={product.id} className="mb-4">
             <CardBody>
@@ -155,7 +155,7 @@ export const ProductList = () => {
                   </Button>
                 </form>
               ) : (
-                <div className="flex items-center justify-between mt-2 px-3">
+                <div className="mt-2 flex items-center justify-between px-3">
                   <div className="mt-3">
                     <h3 className="text-lg font-semibold text-black">
                       {product.title}
