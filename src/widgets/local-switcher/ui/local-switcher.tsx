@@ -1,4 +1,4 @@
-import { locales } from '@/config';
+import { routing } from '@/i18n/routing';
 import { useLocale, useTranslations } from 'next-intl';
 
 import LocalSwitcherSelect from './local-switcher-select';
@@ -9,7 +9,7 @@ export default function LocalSwitcher() {
   return (
     <div>
       <LocalSwitcherSelect defaultValue={locale} label={t('label')}>
-        {locales.map((locale) => (
+        {routing.locales.map((locale) => (
           <option key={locale} value={locale}>
             {locale}
           </option>

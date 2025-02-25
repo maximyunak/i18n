@@ -1,7 +1,8 @@
 {
   "IndexPage": {
     "title": "Index Page",
-    "description": "This is the index page <b>bold</b>"
+    "description": "This is the index page",
+    "product": "Product"
   },
   "LocalSwitcher": {
     "label": "Select Language"

@@ -1,7 +1,8 @@
 {
   "IndexPage": {
     "title": "Главная страница",
-    "description": "Это главная страница <b>жирным</b>"
+    "description": "Это главная страница ",
+    "product": "Продукт"
   },
   "LocalSwitcher": {
     "label": "Выберите язык"

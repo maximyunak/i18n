@@ -2,7 +2,7 @@
 
 import { useTransition } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { usePathname } from '@/navigation';
+import { usePathname } from '@/i18n/routing';
 
 type Props = {
   children: any;
