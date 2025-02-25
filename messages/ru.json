@@ -4,11 +4,16 @@
     "description": "Это главная страница ",
     "product": "Продукт"
   },
-  "LocalSwitcher": {
-    "label": "Выберите язык"
-  },
+
   "localeLayout": {
     "title": "Страница локали",
-    "description": "Это страница локали <b>жирным</b>"
+    "description": "Это страница локали"
+  },
+  "LocalSwitcher": {
+    "switch": "Сменить язык"
+  },
+  "NotFound": {
+    "title": "404 - Страница не найдена",
+    "description": "Извините, страница, которую вы ищете, не существует"
   }
 }

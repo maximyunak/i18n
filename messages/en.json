@@ -4,11 +4,15 @@
     "description": "This is the index page",
     "product": "Product"
   },
-  "LocalSwitcher": {
-    "label": "Select Language"
-  },
   "localeLayout": {
     "title": "Locale Layout",
-    "description": "This is the locale layout <b>bold</b>"
+    "description": "This is the locale layout"
+  },
+  "LocalSwitcher": {
+    "switch": "Switch Language"
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist"
   }
 }

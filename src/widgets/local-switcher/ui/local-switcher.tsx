@@ -1,20 +1,41 @@
-import { routing } from '@/i18n/routing';
+'use client';
+
+import { ChangeEvent, useState, useTransition } from 'react';
+import { usePathname, useRouter } from '@/i18n/routing';
+import { Switch } from '@heroui/react';
 import { useLocale, useTranslations } from 'next-intl';
 
-import LocalSwitcherSelect from './local-switcher-select';
-
 export default function LocalSwitcher() {
-  const t = useTranslations('LocalSwitcher');
+  const router = useRouter();
+  const pathname = usePathname();
   const locale = useLocale();
+  const [isPending, startTransition] = useTransition();
+
+  const [isEng, setIsEng] = useState(locale === 'en');
+
+  const t = useTranslations('LocalSwitcher');
+
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const isChecked = e.target.checked;
+    const nextLocale = isChecked ? 'en' : 'ru';
+    setIsEng(isChecked);
+
+    startTransition(() => {
+      router.replace(pathname, { locale: nextLocale });
+    });
+  };
+
   return (
     <div>
-      <LocalSwitcherSelect defaultValue={locale} label={t('label')}>
-        {routing.locales.map((locale) => (
-          <option key={locale} value={locale}>
-            {locale}
-          </option>
-        ))}
-      </LocalSwitcherSelect>
+      <Switch
+        isSelected={isEng}
+        onChange={onChange}
+        defaultSelected={isEng}
+        // startContent={<span>en</span>}
+        // endContent={<span>ru</span>}
+      >
+        <span className="text-sm">{t('switch')}</span>
+      </Switch>
     </div>
   );
 }
