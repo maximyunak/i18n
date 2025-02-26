@@ -15,8 +15,11 @@ export default function HomePage() {
       <Button className="bg-primary-green">Click me</Button>
       <Button className="bg-primary-blue">Click me</Button>
       <Button className="bg-primary-blue-50">Click me</Button>
-      <Button className="bg-accents-yellow">Click me</Button>
-      <Button className="bg-neutral-01-95">Click me</Button>
+      <Button className="bg-accents-yellow text-body2-uppercase">
+        Click me
+      </Button>
+      <Button className="bg-neutral-01-95 text-h1">Click me</Button>
+      <h1 className="text-body2-uppercase">Click me</h1>
       <LocalSwitcher />
     </>
   );
