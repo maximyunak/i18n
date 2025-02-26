@@ -9,10 +9,11 @@ import '../globals.css';
 import { Providers } from '../providers';
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
   params: { locale: string };
 }) {
+  const locale = (await params).locale;
   const t = await getTranslations({ locale, namespace: 'localeLayout' });
   return {
     title: t('title'),
