@@ -14,7 +14,7 @@ export default function HomePage() {
       <Link href="/product">Product</Link>
       <Button className="bg-primary-green">Click me</Button>
       <Button className="bg-primary-blue">Click me</Button>
-      <Button className="bg-primary-blue-50">Click me</Button>
+      <Button className="bg-gray">Click me</Button>
       <Button className="bg-accents-yellow text-body2-uppercase">
         Click me
       </Button>

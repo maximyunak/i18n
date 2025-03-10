@@ -1,24 +1,32 @@
+import { Montserrat } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { HeroUIProvider } from '@heroui/system';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 
 import '../globals.css';
 
+import { Metadata } from 'next';
+
 import { Providers } from '../providers';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const locale = (await params).locale;
-  const t = await getTranslations({ locale, namespace: 'localeLayout' });
-  return {
-    title: t('title'),
-    description: t('description'),
-  };
+const montserrat = Montserrat({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '700'],
+});
+
+export const metadata: Metadata = {
+  viewport: 'width=device-width, initial-scale=1',
+  title: 'aaa',
+};
+
+export function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html>
+      <body className={montserrat.className}>{children}</body>
+    </html>
+  );
 }
 
 export default async function LocaleLayout({
@@ -29,6 +37,7 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   const locale = (await params).locale;
+
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -37,11 +46,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className="min-h-screen bg-background text-foreground">
+      <body className={montserrat.className}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <HeroUIProvider>
-              <main className="container mx-auto px-4 text-sm font-bold">
+              <main className="container mx-auto min-h-screen px-4 text-sm font-bold">
                 {children}
               </main>
             </HeroUIProvider>

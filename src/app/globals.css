@@ -14,11 +14,20 @@
   }
 }
 
+html {
+  line-height: 1.2 !important;
+  letter-spacing: 0.02em !important;
+  word-spacing: 0.05em !important;
+}
+
+
+
 body {
   color: var(--foreground);
   font-size: 16px;
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* background: var(--background); */
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  /* max-width: 109px !important */
 }
 
 .text-body2-underline {
